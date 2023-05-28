@@ -17,18 +17,15 @@ const Home = () => {
       {snap.intro && (
         <motion.section className="home" {...slideAnimation("left")}>
           <motion.header {...slideAnimation("down")}>
-            <img
-              src="./threejs.png"
-              alt="threejs"
-              className="w-8 h-8 object-contain"
-            />
+            <img src="./s2.png" alt="s2" className="w-8 h-8 object-contain" />
+            Design it Spidey
           </motion.header>
           <motion.div className="home-content" {...headContainerAnimation}>
             <motion.div {...headTextAnimation}>
               <h1 className="head-text">
                 Move
                 <br className="xl:block hidden" />
-                In Style
+                 In Style
               </h1>
             </motion.div>
             <motion.div
@@ -36,7 +33,8 @@ const Home = () => {
               className="flex flex-col gap-5"
             >
               <p className="max-w-md font-normal text-gray-600 text-base">
-                Spidey has no styling sense. But I guess you do.
+                Spidey may have an incredible spidey-sense🕷, but when it comes
+                to styling-sense, he could use some help.
                 <strong>
                   Design your own Tees and show him how it's done.
                 </strong>

@@ -13,6 +13,7 @@ import {
   ColorPicker,
   CustomButton,
   FilePicker,
+  Cross,
   Tab,
 } from "../components";
 
@@ -46,6 +47,8 @@ const Customizer = () => {
             handleSubmit={handleSubmit}
           />
         );
+      case "cross":
+        return <Cross />;
       default:
         return null;
     }
