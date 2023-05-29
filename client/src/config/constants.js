@@ -1,4 +1,12 @@
-import { swatch, fileIcon, ai, view, logoShirt, stylishShirt } from "../assets";
+import {
+  swatch,
+  fileIcon,
+  ai,
+  scale,
+  view,
+  logoShirt,
+  stylishShirt,
+} from "../assets";
 
 export const EditorTabs = [
   {
@@ -10,12 +18,12 @@ export const EditorTabs = [
     icon: fileIcon,
   },
   {
-    name: "aipicker",
-    icon: ai,
+    name: "texturescale",
+    icon: scale,
   },
   {
-    name: "cross",
-    icon: view,
+    name: "aipicker",
+    icon: ai,
   },
 ];
 
@@ -30,6 +38,9 @@ export const FilterTabs = [
   },
 ];
 
+// export const CustomizeTabs = [
+
+// ];
 export const DecalTypes = {
   logo: {
     stateProperty: "logoDecal",

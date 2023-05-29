@@ -11,9 +11,10 @@ const Shirt = () => {
   const logoTexture = useTexture(snap.logoDecal);
   const fullTexture = useTexture(snap.fullDecal);
 
-  useFrame((state, delta) =>
-    easing.dampC(materials.lambert1.color, snap.color, 0.25, delta)
-  );
+  useFrame((state, delta) => {
+    // Update rotation based on delta time
+    easing.dampC(materials.lambert1.color, snap.color, 0.25, delta);
+  });
 
   const stateString = JSON.stringify(snap);
   return (
@@ -28,16 +29,16 @@ const Shirt = () => {
         {snap.isFullTexture && (
           <Decal
             position={[0, 0, 0]}
-            rotation={[0, 0, 0]}
-            scale={1}
+            rotation={[0, 0, 0]} //rotation of texture
+            scale={!snap.value ? 1 : snap.value / 50}
             map={fullTexture}
           />
         )}
 
         {snap.isLogoTexture && (
           <Decal
-            position={[0, 0.04, 0.2]}
-            rotation={[0, 0, 0]}
+            position={[0, 0.04, 0.1]}
+            rotation={[0, 0, 0]} //rotation of logo
             scale={0.15}
             map={logoTexture}
             map-anisotropy={16}
