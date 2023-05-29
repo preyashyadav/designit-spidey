@@ -1,9 +1,15 @@
 import React from "react";
 import CustomButton from "./CustomButton";
+import TextureScale from "./TextureScale";
 const FilePicker = ({ file, setFile, readFile }) => {
   return (
     <div className="filepicker-container">
       <div className="flex-1 flex flex-col">
+        <p className="text-gray-500 text-sm">
+          Upload your logo or full T-Shirt design.
+        </p>
+        <hr />
+        <br />
         <input
           id="file-upload"
           type="file"
@@ -32,6 +38,7 @@ const FilePicker = ({ file, setFile, readFile }) => {
           customStyles="text-xs"
         />
       </div>
+      <br />
     </div>
   );
 };

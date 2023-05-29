@@ -14,6 +14,8 @@ import {
   CustomButton,
   FilePicker,
   Cross,
+  TextureScale,
+  LogoScale,
   Tab,
 } from "../components";
 
@@ -21,10 +23,8 @@ const Customizer = () => {
   const snap = useSnapshot(state);
 
   const [file, setFile] = useState("");
-
   const [prompt, setPrompt] = useState("");
   const [generatingImg, setGeneratingImg] = useState(false);
-
   const [activeEditorTab, setActiveEditorTab] = useState("");
   const [activeFilterTab, setActiveFilterTab] = useState({
     logoShirt: true,
@@ -38,6 +38,8 @@ const Customizer = () => {
         return <ColorPicker />;
       case "filepicker":
         return <FilePicker file={file} setFile={setFile} readFile={readFile} />;
+      case "texturescale":
+        return <TextureScale/>;
       case "aipicker":
         return (
           <AIPicker
@@ -47,8 +49,6 @@ const Customizer = () => {
             handleSubmit={handleSubmit}
           />
         );
-      case "cross":
-        return <Cross />;
       default:
         return null;
     }
@@ -136,10 +136,15 @@ const Customizer = () => {
                   <Tab
                     key={tab.name}
                     tab={tab}
-                    handleClick={() => setActiveEditorTab(tab.name)}
+                    handleClick={() => {
+                      if (activeEditorTab === tab.name) {
+                        setActiveEditorTab("");
+                      } else {
+                        setActiveEditorTab(tab.name);
+                      }
+                    }}
                   />
                 ))}
-
                 {generateTabContent()}
               </div>
             </div>
