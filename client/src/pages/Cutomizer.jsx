@@ -16,6 +16,7 @@ import {
   Cross,
   TextureScale,
   LogoScale,
+  Title,
   Tab,
 } from "../components";
 
@@ -24,6 +25,7 @@ const Customizer = () => {
 
   const [file, setFile] = useState("");
   const [prompt, setPrompt] = useState("");
+  const [title, setTitle] = useState("Spidey");
   const [generatingImg, setGeneratingImg] = useState(false);
   const [activeEditorTab, setActiveEditorTab] = useState("");
   const [activeFilterTab, setActiveFilterTab] = useState({
@@ -39,7 +41,7 @@ const Customizer = () => {
       case "filepicker":
         return <FilePicker file={file} setFile={setFile} readFile={readFile} />;
       case "texturescale":
-        return <TextureScale/>;
+        return <TextureScale />;
       case "aipicker":
         return (
           <AIPicker
@@ -49,6 +51,8 @@ const Customizer = () => {
             handleSubmit={handleSubmit}
           />
         );
+      case "title":
+        return <Title title={title} setTitle={setTitle} />;
       default:
         return null;
     }

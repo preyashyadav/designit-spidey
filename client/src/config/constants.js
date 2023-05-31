@@ -2,6 +2,7 @@ import {
   swatch,
   fileIcon,
   ai,
+  ai2,
   scale,
   view,
   logoShirt,
@@ -20,6 +21,10 @@ export const EditorTabs = [
   {
     name: "texturescale",
     icon: scale,
+  },
+  {
+    name: "title",
+    icon: ai2,
   },
   {
     name: "aipicker",
