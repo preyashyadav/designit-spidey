@@ -5,6 +5,7 @@ import FilePicker from "./FilePicker";
 import Cross from "./Cross";
 import TextureScale from "./TextureScale";
 import LogoScale from "./LogoScale";
+import Title from "./Title";
 import Tab from "./Tab";
 export { CustomButton };
 export { AIPicker };
@@ -13,6 +14,7 @@ export { FilePicker };
 export { Cross };
 export { TextureScale };
 export { LogoScale };
+export { Title };
 export { Tab };
 
 // or export {CustomButton, AIPicker, ColorPicker, FilePicker, Tab};
