@@ -17,7 +17,11 @@ const Home = () => {
       {snap.intro && (
         <motion.section className="home" {...slideAnimation("left")}>
           <motion.header {...slideAnimation("down")}>
-            <img src="./s2.png" alt="s2" className="w-8 h-8 object-contain" />
+            <img
+              src="./py-black.png"
+              alt="s2"
+              className="w-8 h-8 object-contain"
+            />
             Design it Spidey
           </motion.header>
           <motion.div className="home-content" {...headContainerAnimation}>
@@ -25,7 +29,7 @@ const Home = () => {
               <h1 className="head-text">
                 Move
                 <br className="xl:block hidden" />
-                 In Style
+                In Style
               </h1>
             </motion.div>
             <motion.div

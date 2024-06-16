@@ -13,7 +13,11 @@ const config = new Configuration({
 const openai = new OpenAIApi(config);
 
 router.route("/").get((req, res) => {
-  res.status(200).json({ message: "Hello from DALL.E ROUTES" });
+  if (res.status(200)) {
+    return res.json({ message: "Hello from DALL.E ROUTES" });
+  } else {
+    return res.status(500).json({ message: "Something went wrong" });
+  }
 });
 
 router.route("/").post(async (req, res) => {

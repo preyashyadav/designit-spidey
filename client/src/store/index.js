@@ -6,8 +6,8 @@ const state = proxy({
   value: 50,
   isLogoTexture: true,
   isFullTexture: false,
-  logoDecal: "./s4.png",
-  fullDecal: "./s7.png",
+  logoDecal: "./py.png",
+  fullDecal: "./py.png",
   titleDecal: "Spidey",
 });
 
