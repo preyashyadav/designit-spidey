@@ -16,7 +16,7 @@ html {
 }
 
 .app {
-  @apply relative w-full h-screen overflow-hidden;
+  @apply relative w-full h-screen;
 }
 
 .home {
@@ -44,7 +44,7 @@ html {
 }
 
 .customizetabs-container {
-   @apply glassmorphism w-16 border-[2px] rounded-lg flex flex-col justify-center items-center ml-auto py-4 gap-4;
+  @apply glassmorphism w-16 border-[2px] rounded-lg flex flex-col justify-center items-center ml-auto py-4 gap-4;
 }
 
 .aipicker-container {

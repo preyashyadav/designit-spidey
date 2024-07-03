@@ -56,35 +56,11 @@ const Shirt = () => {
             position={[0, 0.15, -0.1]}
             scale={0.15}
             value={title}
-            map-anisotropy={16}
+            // map-anisotropy={16}
             depthTest={false}
             depthWrite={true}
           />
         )}
-
-        {/* {snap.isLogoTexture && (
-          <Decal
-            position={[-0.27, 0.05, 0.1]}
-            rotation={[0, 0, 0]} //rotation of logo
-            scale={0.15}
-            map={logoTexture}
-            map-anisotropy={50}
-            depthTest={true}
-            depthWrite={false}
-          />
-        )} */}
-
-        {/* {snap.isLogoTexture && (
-          <Decal
-            position={[0.27, 0.05, 0.1]}
-            rotation={[0, 0, 0]} //rotation of logo
-            scale={0.15}
-            map={logoTexture}
-            map-anisotropy={16}
-            depthTest={false}
-            depthWrite={true}
-          />
-        )} */}
       </mesh>
     </group>
   );
