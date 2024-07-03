@@ -8,7 +8,7 @@ const state = proxy({
   isFullTexture: false,
   logoDecal: "./py.png",
   fullDecal: "./py.png",
-  titleDecal: "Spidey",
+  // titleDecal: "Spidey",
 });
 
 export default state;

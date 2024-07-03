@@ -8,47 +8,47 @@ import {
   headTextAnimation,
   slideAnimation,
 } from "../config/motion";
-import { CustomButton } from "../components";
 
 const Home = () => {
   const snap = useSnapshot(state);
+
   return (
     <AnimatePresence>
       {snap.intro && (
         <motion.section className="home" {...slideAnimation("left")}>
-          <motion.header {...slideAnimation("down")}>
+          <motion.header
+            {...slideAnimation("down")}
+            className="flex items-center gap-2"
+          >
             <img
               src="./py-black.png"
               alt="s2"
               className="w-8 h-8 object-contain"
             />
-            Design it Spidey
+            <h1 className="text-xl font-bold">Design it Spidey</h1>
           </motion.header>
-          <motion.div className="home-content" {...headContainerAnimation}>
+          <motion.div className="home-content p-5" {...headContainerAnimation}>
             <motion.div {...headTextAnimation}>
-              <h1 className="head-text">
-                Move
-                <br className="xl:block hidden" />
-                In Style
-              </h1>
+              <h2 className="text-2xl font-bold">
+                Welcome to Design it Spidey
+              </h2>
+              <p className="mt-2 text-gray-600">
+                Create and customize your designs with ease. Explore the endless
+                possibilities with our tools.
+              </p>
             </motion.div>
             <motion.div
               {...headContentAnimation}
-              className="flex flex-col gap-5"
+              className="flex flex-wrap gap-5 mt-5"
             >
-              <p className="max-w-md font-normal text-gray-600 text-base">
-                Spidey may have an incredible spidey-sense🕷, but when it comes
-                to styling-sense, he could use some help.
-                <strong>
-                  Design your own Tees and show him how it's done.
-                </strong>
-              </p>
-              <CustomButton
-                type="filled"
-                title="Customize It"
-                handleClick={() => (state.intro = false)}
-                customStyles="w-fit px-4 py-2.5 font-bold text-sm"
-              />
+              <Card title="Shoes" description="" link="/shoe" />
+              <Card title="Phone Cover" description="" link="/phone" />
+              <Card title="Apple Watch" description="" link="/watch" />
+              {/* <Card
+                title="Page 4"
+                description="This is the fourth page."
+                link="/watch"
+              /> */}
             </motion.div>
           </motion.div>
         </motion.section>
@@ -56,5 +56,17 @@ const Home = () => {
     </AnimatePresence>
   );
 };
+
+const Card = ({ title, description, link }) => (
+  <a href={link} className="w-full sm:w-1/2 lg:w-1/4">
+    <motion.div
+      className="p-5 border border-gray-300 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+      whileHover={{ scale: 1.05 }}
+    >
+      <h3 className="text-lg font-semibold">{title}</h3>
+      <p className="text-gray-600 mt-2">{description}</p>
+    </motion.div>
+  </a>
+);
 
 export default Home;
