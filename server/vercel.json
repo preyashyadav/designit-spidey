@@ -1,6 +1,19 @@
 {
   "version": 2,
   "builds": [{ "src": "*.js", "use": "@vercel/node" }],
-  "routes": [
-    { "src": "/(.*)", "dest": "/" }]
+  "routes": [{ "src": "/(.*)", "dest": "/" }],
+  "rewrites": [
+    {
+      "source": "/shirt/(.*)",
+      "destination": "/shirt"
+    },
+    {
+      "source": "/shoe/(.*)",
+      "destination": "/shoe"
+    },
+    {
+      "source": "/phone/(.*)",
+      "destination": "/phone"
+    }
+  ]
 }
