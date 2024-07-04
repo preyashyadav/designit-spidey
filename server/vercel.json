@@ -1,19 +1,14 @@
 {
   "version": 2,
-  "builds": [{ "src": "*.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/" }],
-  "rewrites": [
-    {
-      "source": "/shirt/(.*)",
-      "destination": "/shirt"
-    },
-    {
-      "source": "/shoe/(.*)",
-      "destination": "/shoe"
-    },
-    {
-      "source": "/phone/(.*)",
-      "destination": "/phone"
-    }
+  "builds": [
+    { "src": "server/**/*.js", "use": "@vercel/node" },
+    { "src": "client/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/server/$1.js" },
+    { "src": "/shoe", "dest": "/client/shoe/index.html" },
+    { "src": "/phone", "dest": "/client/phone/index.html" },
+    { "src": "/watch", "dest": "/client/watch/index.html" },
+    { "src": "/(.*)", "dest": "/client/$1" }
   ]
 }
