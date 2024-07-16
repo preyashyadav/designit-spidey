@@ -15,6 +15,7 @@ import {
   TextureScale,
   LogoScale,
   Title,
+  ShoeControls,
 } from "../components";
 
 const Customizer = () => {
@@ -121,7 +122,8 @@ const Customizer = () => {
           />
         );
       case "title":
-        return <Title title={title} setTitle={setTitle} />;
+        // return <Title title={title} setTitle={setTitle} />;
+        return <ShoeControls />;
       default:
         return null;
     }

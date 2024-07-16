@@ -6,9 +6,9 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/server/$1.js" },
-    { "src": "/shoe", "dest": "/client/shoe/index.html" },
-    { "src": "/phone", "dest": "/client/phone/index.html" },
-    { "src": "/watch", "dest": "/client/watch/index.html" },
+    { "src": "/shoe", "dest": "/client/shoe" },
+    { "src": "/phone", "dest": "/client/phone" },
+    { "src": "/watch", "dest": "/client/watch" },
     { "src": "/(.*)", "dest": "/client/$1" }
   ]
 }
