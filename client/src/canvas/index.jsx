@@ -4,6 +4,7 @@ import { Environment, Center } from "@react-three/drei";
 import Shirt from "./Shirt";
 import Can from "./Can";
 import Shoe from "./Shoe";
+import ShoeControls from "../components/ShoeControls";
 import Phone from "./Phone";
 import Laptop from "./Laptop";
 import Watch from "./Watch";

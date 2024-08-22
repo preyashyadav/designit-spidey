@@ -9,6 +9,7 @@ const state = proxy({
   logoDecal: "./py.png",
   fullDecal: "./py.png",
   // titleDecal: "Spidey",
+  selectedPart: "shoe_low",
 });
 
 export default state;

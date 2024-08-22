@@ -7,6 +7,7 @@ import TextureScale from "./TextureScale";
 import LogoScale from "./LogoScale";
 import Title from "./Title";
 import Tab from "./Tab";
+import ShoeControls from "./ShoeControls";
 export { CustomButton };
 export { AIPicker };
 export { ColorPicker };
@@ -16,5 +17,6 @@ export { TextureScale };
 export { LogoScale };
 export { Title };
 export { Tab };
+export { ShoeControls };
 
 // or export {CustomButton, AIPicker, ColorPicker, FilePicker, Tab};

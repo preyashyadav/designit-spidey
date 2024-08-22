@@ -1,3 +1,4 @@
+// Shoe.js
 import React from "react";
 import { easing } from "maath";
 import { useSnapshot } from "valtio";
@@ -12,16 +13,15 @@ const Shoe = () => {
   const fullTexture = useTexture(snap.fullDecal);
 
   useFrame((state, delta) => {
-    if (materials.material_low && materials.material_up) {
-      // easing.dampC(materials.material_low.color, snap.color, 0.25, delta);
+    if (snap.selectedPart === "shoe_low" && materials.material_low) {
+      easing.dampC(materials.material_low.color, snap.color, 0.25, delta);
+    } else if (snap.selectedPart === "shoe_up" && materials.material_up) {
       easing.dampC(materials.material_up.color, snap.color, 0.25, delta);
     }
   });
 
-  const stateString = JSON.stringify(snap);
   return (
     <group
-      key={stateString}
       rotation={[-Math.PI / 2, Math.PI / 2, Math.PI / 2]}
       scale={0.025}
       position={[0, 0, 0]}
@@ -56,7 +56,6 @@ const Shoe = () => {
             map={fullTexture}
           />
         )}
-
         {snap.isLogoTexture && logoTexture && (
           <Decal
             position={[0, 0.04, 0.1]}

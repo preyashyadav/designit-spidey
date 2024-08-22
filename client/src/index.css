@@ -94,3 +94,25 @@ input[type="file"] {
 .sketch-picker > div:nth-child(3) {
   display: none !important;
 }
+
+/* styles.css */
+.button-grid {
+  position: absolute;
+  top: -150px;
+  left: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 1; /* Ensure buttons appear above the canvas */
+}
+
+.button-grid button {
+  padding: 10px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button-grid button:hover {
+  background-color: #ccc;
+}
