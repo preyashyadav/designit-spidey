@@ -8,6 +8,20 @@
       }
     }
   ],
+  "routes": [
+    {
+      "src": "/shoe",
+      "dest": "/shoe/index.html"
+    },
+    {
+      "src": "/phone",
+      "dest": "/phone/index.html"
+    },
+    {
+      "src": "/watch",
+      "dest": "/watch/index.html"
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
