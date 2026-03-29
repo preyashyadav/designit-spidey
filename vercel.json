@@ -10,6 +10,10 @@
   ],
   "rewrites": [
     {
+      "source": "/shoe",
+      "destination": "/shoe/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
